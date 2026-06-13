@@ -164,7 +164,7 @@ Seleccione una opción (1-8): 4
 
 - **Rodrigo Nahuel Guggiana**: trabajó principalmente en el dataset de países, los filtros por continente, población y superficie, los ordenamientos, el módulo de estadísticas y la revisión de funcionamiento de esas opciones.
 
-Ambos integrantes revisamos el programa completo, probarmos el menú y participamos en la preparación de la entrega final.
+Ambos integrantes revisamos el programa completo, probamos el menú y participamos en la preparación de la entrega final.
 
 ## Bibliografía y referencias
 
