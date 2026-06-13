@@ -1,4 +1,4 @@
-# Funciones para calcular estadísticas sobre la lista de países.
+# Funciones para filtrar y ordenar países.
 
 from paises import normalizar
 
