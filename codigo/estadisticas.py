@@ -1,11 +1,4 @@
-"""
-Módulo: estadisticas.py
-Responsabilidad: cálculos estadísticos sobre la lista de países.
-
-Todas las funciones son PURAS (sin efectos secundarios): reciben la lista
-y devuelven el resultado calculado.
-"""
-
+# Funciones para estadisticas
 
 def pais_mayor_poblacion(paises):                                                # Devuelve el país con MAYOR población. None si la lista está vacía
     if not paises:
@@ -39,10 +32,6 @@ def cantidad_por_continente(paises):                                            
 
     return dict(sorted(conteo.items(), key=lambda kv: kv[1], reverse=True))
 
-
-# ---------------------------------------------------------------------------
-# Helper para imprimir todas las estadísticas
-# ---------------------------------------------------------------------------
 def mostrar_estadisticas(paises):                                                # Imprime todas las estadísticas requeridas por la consigna.
     if not paises:
         print("\n  No hay países cargados para calcular estadísticas.")
