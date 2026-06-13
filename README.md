@@ -16,9 +16,9 @@ El sistema implementa los conceptos centrales que aprendidos en la materia: **li
 
 ## Enlaces
 
-- 📂 **Repositorio GitHub**: <https://github.com/matiasfnunezdev/tpi-gestion-paises-utn>
-- 📹 **Video demostrativo**: [`COMPLETAR_LINK_YOUTUBE`](#) (pendiente de grabación)
-- 📄 **Documentación PDF**: [`docs/documentacion.pdf`](docs/documentacion.pdf)
+- **Repositorio GitHub**: <https://github.com/matiasfnunezdev/tpi-gestion-paises-utn>
+- **Video demostrativo**: [`COMPLETAR_LINK_YOUTUBE`](#) (pendiente de grabación)
+- **Documentación PDF**: [`docs/documentacion.pdf`](docs/documentacion.pdf)
 
 ## Estructura del proyecto
 
