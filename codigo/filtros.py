@@ -1,13 +1,6 @@
-"""
-Módulo: filtros.py
-Responsabilidad: filtros por criterio + ordenamientos.
-
-Devuelven NUEVAS listas sin modificar la original (lo que cumple buena
-práctica: las funciones de filtro/orden no tienen efectos colaterales).
-"""
+# Funciones para calcular estadísticas sobre la lista de países.
 
 from paises import normalizar
-
 
 # ---------------------------------------------------------------------------
 # Filtros
@@ -34,7 +27,7 @@ def filtrar_por_rango_superficie(paises, minimo, maximo):                       
 
 
 # ---------------------------------------------------------------------------
-# Ordenamientos (devuelven nuevas lista, no modifica la original)
+# Ordenamientos
 # ---------------------------------------------------------------------------
 def ordenar_por_nombre(paises, descendente=False):                                                         # Ordena alfabéticamente por nombre.
     return sorted(paises, key=lambda p: normalizar(p["nombre"]), reverse=descendente)
