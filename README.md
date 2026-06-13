@@ -10,9 +10,9 @@
 
 ## Descripción
 
-Aplicación de consola en Python que gestiona un dataset de **120 países** cargado desde un archivo CSV. El código permite agregar, actualizar, buscar, filtrar, ordenar y generar estadísticas sobre el catálogo de paises.
+Aplicación de consola en Python para trabajar con un archivo CSV de países. El programa permite mostrar los datos cargados, agregar y actualizar países, buscar por nombre, filtrar, ordenar y ver algunas estadísticas básicas.
 
-El sistema implementa los conceptos centrales que aprendidos en la materia: **listas**, **diccionarios**, **funciones**, **estructuras condicionales y repetitivas**, **lectura/escritura de CSV**, **manejo de errores con `try/except`** y **modularización**.
+Para resolverlo usamos contenidos vistos en Programación I, como listas, diccionarios, funciones, condicionales, bucles, archivos CSV y manejo de errores con try/except. También separamos el código en varios archivos para que fuera más fácil de leer y probar.
 
 ## Enlaces
 
@@ -23,22 +23,15 @@ El sistema implementa los conceptos centrales que aprendidos en la materia: **li
 ## Estructura del proyecto
 
 ```
-trabajo-practico-integrador/
+tpi-gestion-paises-utn/
 ├── codigo/
-│   ├── main.py             # Punto de entrada con el menú
-│   ├── paises.py           # CRUD + búsqueda + helpers de validación
-│   ├── filtros.py          # Filtros y ordenamientos
-│   ├── estadisticas.py     # Cálculos estadísticos
-│   └── paises.csv          # Dataset base (120 países)
-├── docs/
-│   ├── documentacion.md    # Fuente Markdown del informe
-│   ├── documentacion.docx  # Word generado
-│   └── documentacion.pdf   # Documento académico de entrega
-├── entrega/
-│   └── TPI_Programacion_1.zip   # Paquete final
-├── enunciado-tpi.md
-├── test_tpi.py             # 59 tests automáticos
-└── README.md               # Este archivo
+│   ├── main.py
+│   ├── paises.py
+│   ├── filtros.py
+│   ├── estadisticas.py
+│   └── paises.csv
+├── README.md
+└── test_tpi.py
 ```
 
 ## Instalación y ejecución
@@ -57,13 +50,9 @@ python main.py
 
 El programa carga automáticamente `paises.csv` y muestra el menú principal. Si el CSV está malformado o no se encuentra, lo informa con un mensaje claro y termina.
 
-### Cómo ejecutar los tests
+### Archivo de pruebas
 
-```bash
-PYTHONIOENCODING=utf-8 python test_tpi.py
-```
-
-Cubre **59 casos**: carga del CSV, CRUD, búsquedas (parcial/exacta), filtros (con rangos válidos e inválidos), ordenamientos, estadísticas (incluyendo lista vacía) y validaciones de helpers.
+También dejamos un archivo `test_tpi.py` que usamos para revisar varias funciones del programa sin tener que probar todo manualmente desde el menú.
 
 ## Ejemplo de entradas/salidas
 
@@ -159,18 +148,21 @@ Seleccione una opción (1-8): 4
 |---|---|
 | **Listas** | `paises[]` como estructura principal |
 | **Diccionarios** | Cada país es un `dict` con 4 claves |
-| **Funciones** | Modularización: 1 función por responsabilidad en 4 archivos |
+| **Funciones** | Separación del programa en funciones para ordenar mejor el código |
 | **Condicionales** | Menú, validaciones, manejo de casos de borde |
 | **Bucles** | Recorrido de la lista, menú persistente |
 | **Ordenamientos** | `sorted()` con `key=` y `reverse=` |
 | **Estadísticas básicas** | `max`, `min`, promedios, conteos |
 | **Archivos CSV** | Módulo `csv` con `DictReader` y `DictWriter` |
-| **Manejo de errores** | `try/except` + `raise ValueError` con mensajes claros |
+| **Manejo de errores** | Uso de `try/except` para entradas inválidas y errores del archivo |
 
 ## Participación de los integrantes
 
-- **Matias Fernando Nuñez**: arquitectura general, módulos `paises.py` y `main.py`, tests automáticos.
-- **Rodrigo Nahuel Guggiana**: módulos `filtros.py`, `estadisticas.py`, dataset CSV, documentación técnica.
+- **Matias Fernando Nuñez**: trabajó principalmente en la estructura inicial del proyecto, el menú principal, el módulo `paises.py`, la carga y guardado del CSV, validaciones principales y archivo de pruebas.
+
+- **Rodrigo Nahuel Guggiana**: trabajó principalmente en el dataset de países, los filtros por continente, población y superficie, los ordenamientos, el módulo de estadísticas y la revisión de funcionamiento de esas opciones.
+
+Ambos integrantes revisarmos el programa completo, probarmos el menú y participamos en la preparación de la entrega final.
 
 ## Bibliografía y referencias
 
@@ -178,7 +170,6 @@ Seleccione una opción (1-8): 4
 - **Módulo csv**: <https://docs.python.org/es/3/library/csv.html>
 - **Módulo os**: <https://docs.python.org/es/3/library/os.html>
 - **Manejo de excepciones**: <https://docs.python.org/es/3/tutorial/errors.html>
-- **PEP 8 — Style Guide**: <https://peps.python.org/pep-0008/>
 - **Material de la cátedra UTN — Programación 1, 2026**.
 
 
