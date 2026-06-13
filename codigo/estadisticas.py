@@ -8,7 +8,7 @@ y devuelven el resultado calculado.
 
 
 def pais_mayor_poblacion(paises):                                                # Devuelve el país con MAYOR población. None si la lista está vacía
-        if not paises:
+    if not paises:
         return None
     return max(paises, key=lambda p: p["poblacion"])
 
