@@ -1,0 +1,57 @@
+"""
+Módulo: filtros.py
+Responsabilidad: filtros por criterio + ordenamientos.
+
+Devuelven NUEVAS listas sin modificar la original (lo que cumple buena
+práctica: las funciones de filtro/orden no tienen efectos colaterales).
+"""
+
+from paises import normalizar
+
+
+# ---------------------------------------------------------------------------
+# Filtros
+# ---------------------------------------------------------------------------
+def filtrar_por_continente(paises, continente):
+    """Devuelve los países cuyo continente coincida (case-insensitive)."""
+    consulta = normalizar(continente)
+    return [p for p in paises if normalizar(p["continente"]) == consulta]
+
+
+def filtrar_por_rango_poblacion(paises, minimo, maximo):
+    """Devuelve los países con población entre [minimo, maximo] inclusivos.
+
+    Lanza ValueError si minimo > maximo o si alguno es negativo.
+    """
+    if minimo < 0 or maximo < 0:
+        raise ValueError("Los valores del rango no pueden ser negativos.")
+    if minimo > maximo:
+        raise ValueError(f"El mínimo ({minimo:,}) no puede ser mayor que el máximo ({maximo:,}).")
+    return [p for p in paises if minimo <= p["poblacion"] <= maximo]
+
+
+def filtrar_por_rango_superficie(paises, minimo, maximo):
+    """Devuelve los países con superficie entre [minimo, maximo] inclusivos."""
+    if minimo < 0 or maximo < 0:
+        raise ValueError("Los valores del rango no pueden ser negativos.")
+    if minimo > maximo:
+        raise ValueError(f"El mínimo ({minimo:,}) no puede ser mayor que el máximo ({maximo:,}).")
+    return [p for p in paises if minimo <= p["superficie"] <= maximo]
+
+
+# ---------------------------------------------------------------------------
+# Ordenamientos (devuelven nueva lista, no muta la original)
+# ---------------------------------------------------------------------------
+def ordenar_por_nombre(paises, descendente=False):
+    """Ordena alfabéticamente por nombre (ignorando capitalización)."""
+    return sorted(paises, key=lambda p: normalizar(p["nombre"]), reverse=descendente)
+
+
+def ordenar_por_poblacion(paises, descendente=False):
+    """Ordena por población."""
+    return sorted(paises, key=lambda p: p["poblacion"], reverse=descendente)
+
+
+def ordenar_por_superficie(paises, descendente=False):
+    """Ordena por superficie."""
+    return sorted(paises, key=lambda p: p["superficie"], reverse=descendente)
