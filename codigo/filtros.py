@@ -2,9 +2,7 @@
 
 from paises import normalizar
 
-# ---------------------------------------------------------------------------
-# Filtros
-# ---------------------------------------------------------------------------
+
 def filtrar_por_continente(paises, continente):                                                            # Devuelve los países cuyo continente coincida (case-insensitive).
     consulta = normalizar(continente)
     return [p for p in paises if normalizar(p["continente"]) == consulta]
@@ -26,9 +24,6 @@ def filtrar_por_rango_superficie(paises, minimo, maximo):                       
     return [p for p in paises if minimo <= p["superficie"] <= maximo]
 
 
-# ---------------------------------------------------------------------------
-# Ordenamientos
-# ---------------------------------------------------------------------------
 def ordenar_por_nombre(paises, descendente=False):                                                         # Ordena alfabéticamente por nombre.
     return sorted(paises, key=lambda p: normalizar(p["nombre"]), reverse=descendente)
 
