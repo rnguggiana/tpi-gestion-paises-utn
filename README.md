@@ -10,9 +10,9 @@
 
 ## Descripción
 
-Aplicación de consola en Python que gestiona un dataset de **120 países** cargado desde un archivo CSV. Permite agregar, actualizar, buscar, filtrar, ordenar y generar estadísticas sobre el catálogo.
+Aplicación de consola en Python que gestiona un dataset de **120 países** cargado desde un archivo CSV. El código permite agregar, actualizar, buscar, filtrar, ordenar y generar estadísticas sobre el catálogo de paises.
 
-El sistema implementa los conceptos centrales aprendidos en Programación 1: **listas**, **diccionarios**, **funciones**, **estructuras condicionales y repetitivas**, **lectura/escritura de CSV**, **manejo de errores con `try/except`** y **modularización** (una función = una responsabilidad).
+El sistema implementa los conceptos centrales que aprendidos en la materia: **listas**, **diccionarios**, **funciones**, **estructuras condicionales y repetitivas**, **lectura/escritura de CSV**, **manejo de errores con `try/except`** y **modularización**.
 
 ## Enlaces
 
@@ -33,11 +33,10 @@ trabajo-practico-integrador/
 ├── docs/
 │   ├── documentacion.md    # Fuente Markdown del informe
 │   ├── documentacion.docx  # Word generado
-│   └── documentacion.pdf   # ⭐ Documento académico de entrega
+│   └── documentacion.pdf   # Documento académico de entrega
 ├── entrega/
 │   └── TPI_Programacion_1.zip   # Paquete final
 ├── enunciado-tpi.md
-├── guion-video.md          # Guión estructurado de 10-15 min
 ├── test_tpi.py             # 59 tests automáticos
 └── README.md               # Este archivo
 ```
@@ -170,12 +169,8 @@ Seleccione una opción (1-8): 4
 
 ## Participación de los integrantes
 
-> **Nota**: este apartado debe completarse al definir el trabajo con el/la compañero/a. Sugerencia de distribución:
-
 - **Matias Fernando Nuñez**: arquitectura general, módulos `paises.py` y `main.py`, tests automáticos.
 - **Rodrigo Nahuel Guggiana**: módulos `filtros.py`, `estadisticas.py`, dataset CSV, documentación técnica.
-
-Ambos integrantes participaron en el video y la revisión final del código.
 
 ## Bibliografía y referencias
 
@@ -186,6 +181,4 @@ Ambos integrantes participaron en el video y la revisión final del código.
 - **PEP 8 — Style Guide**: <https://peps.python.org/pep-0008/>
 - **Material de la cátedra UTN — Programación 1, 2026**.
 
-## Licencia
 
-Trabajo académico - Tecnicatura UTN 2026. Uso educativo.
