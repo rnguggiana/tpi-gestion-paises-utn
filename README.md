@@ -17,7 +17,7 @@ Para resolverlo usamos contenidos vistos en Programación I, como listas, diccio
 ## Enlaces
 
 - **Repositorio GitHub**: <https://github.com/matiasfnunezdev/tpi-gestion-paises-utn>
-- **Video demostrativo**: [`COMPLETAR_LINK_YOUTUBE`](#) (pendiente de grabación)
+- **Video demostrativo**: <https://www.youtube.com/watch?v=jEk6lpOXb-Q>
 - **Documentación PDF**: [`docs/documentacion.pdf`](docs/documentacion.pdf)
 
 ## Estructura del proyecto
