@@ -29,7 +29,7 @@ def ordenar_por_nombre(paises, descendente=False):                              
 
 
 def ordenar_por_poblacion(paises, descendente=False):                                                      # Ordena por población.  
-        return sorted(paises, key=lambda p: p["poblacion"], reverse=descendente)
+    return sorted(paises, key=lambda p: p["poblacion"], reverse=descendente)
 
 
 def ordenar_por_superficie(paises, descendente=False):                                                     # Ordena por superficie.
